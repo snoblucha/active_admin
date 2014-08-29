@@ -58,7 +58,6 @@ module ActiveAdmin
           insert_tag view_factory.title_bar, title, action_items_for_action
         end
 
-
         def build_page_content
           build_flash_messages
           div id: "active_admin_content", class: (skip_sidebar? ? "without_sidebar" : "with_sidebar") do
@@ -68,11 +67,9 @@ module ActiveAdmin
         end
 
         def build_flash_messages
-          if active_admin_flash_messages.any?
-            div class: 'flashes' do
-              active_admin_flash_messages.each do |type, message|
-                div message, class: "flash flash_#{type}"
-              end
+          div class: 'flashes' do
+            flash.each do |type, message|
+              div message, class: "flash flash_#{type}"
             end
           end
         end
@@ -86,7 +83,7 @@ module ActiveAdmin
         end
 
         def main_content
-          I18n.t('active_admin.main_content', model: self.class.name).html_safe
+          I18n.t('active_admin.main_content', model: title).html_safe
         end
 
         def title

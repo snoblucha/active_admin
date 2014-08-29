@@ -33,6 +33,9 @@ de:
         ends_with: "Endet mit"
         greater_than: "Größer als"
         less_than: "Kleiner als"
+    status_tag:
+      "yes": "Ja"
+      "no": "Nein"
     main_content: "Bitte implementieren Sie %{model}#main_content, um Inhalte anzuzeigen."
     logout: "Abmelden"
     powered_by: "Powered by %{active_admin} %{version}"
@@ -92,7 +95,7 @@ de:
         submit: "Registrieren"
       login:
         title: "Login"
-        remember_me: "erinnere dich an mich"
+        remember_me: "Angemeldet bleiben"
         submit: "Login"
       reset_password:
         title: "Passwort vergessen?"
@@ -129,14 +132,6 @@ de:
       admin_user:
         one: Administrator
         other: Administratoren
-  devise:
-    failure:
-      admin_user:
-        invalid: Benutzername oder Kennwort nicht korrekt.
-        unauthenticated: Bitte melden Sie sich als Administrator an.
-    sessions:
-      admin_user:
-        signed_in: Erfolgreich als Administrator angemeldet.
   formtastic:
     yes: "Ja"
     no: "Nein"

@@ -2,16 +2,10 @@ source 'https://rubygems.org'
 
 gemspec
 
-ACTIVE_ADMIN_PATH = File.dirname(__FILE__) unless defined?(ACTIVE_ADMIN_PATH)
-
-require File.expand_path('spec/support/detect_rails_version', ACTIVE_ADMIN_PATH)
+require File.expand_path 'spec/support/detect_rails_version', File.dirname(__FILE__)
 
 rails_version = detect_rails_version
 gem 'rails', rails_version
-
-gem 'arbre', github: 'gregbell/arbre' # until gregbell/arbre#16 makes it into an official release
-
-gem 'sass-rails', '4.0.3' if rails_version[0] == '4' # #3005, #3093
 
 # Optional dependencies
 gem 'cancan'
